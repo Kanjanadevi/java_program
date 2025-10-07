@@ -1,0 +1,64 @@
+
+Veena wants to learn how to calculate the area of different shapes (Square, Rectangle, Circle, Triangle) and implement it in programming.
+Write a program to calculate the area of each shape based on the given inputs.
+
+Formulas:
+
+Square:Area=a×a
+Rectangle:Area=l×b
+Circle:Area=πr^2 (Use π = 3.14159, round to 2 decimal places)
+Triangle:Area=(1/2)×b×h
+Input Format:
+
+First input: Integer for side of square (a)
+Second and third input: Integers for length (l) and breadth (b) of rectangle
+Fourth input: Integer for radius (r) of circle
+Fifth and sixth input: Integers for base (B) and height (h) of triangle
+Constraints:
+No constraints
+
+Output Format:
+Print the area of each shape in the following format:
+
+Area of Square=...
+Area of Rectangle=...
+Area of Circle=...
+Area of Triangle=...
+Sample Input 0:
+2
+3
+2
+3
+6
+5
+
+Sample Output 0:
+Area of Square=4
+Area of Rectangle=6
+Area of Circle=28.27
+Area of Triangle=15
+
+
+
+SOLUTION:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner (System.in);
+      int s = sc.nextInt();
+      int le = sc.nextInt();
+      int br = sc.nextInt();
+      int r = sc.nextInt();
+      int ba = sc.nextInt();
+      int he = sc.nextInt();
+      
+      double Ca= 3.14*r*r;
+      System.out.println("Area of Square="+ s*s);
+      System.out.println("Area of Rectangle="+ le*br);
+      System.out.print("Area of Circle=");
+      System.out.printf("%.2f\n",Ca);
+      System.out.println("Area of Triangle="+(ba*he)/2);
+  }
+}
