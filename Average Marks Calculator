@@ -1,0 +1,59 @@
+Write a program that reads marks in five subjects and calculates the average.
+
+If the average is a whole number, print it as an integer.
+
+If the average is not a whole number, print it with exactly two digits after the decimal point.
+
+Constraints:
+0 <= marks in each subject <= 100
+
+Input Format:
+Five integers, each on a separate line, representing marks in five subjects.
+
+Output Format:
+Print the average marks following the rules above.
+
+Sample Input:
+50
+50
+50
+50
+50
+
+Sample Output:
+50
+
+Sample Input:
+45
+93
+23
+45
+65
+
+Sample Output:
+54.20
+
+SOLUTION:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      int c = sc.nextInt();
+      int d = sc.nextInt();
+      int e = sc.nextInt();
+      int tot = a+b+c+d+e;
+      double avg = tot/5.00;
+      
+      if (avg == (int) avg) {
+            System.out.println((int) avg);
+        } else {
+            System.out.printf("%.2f", avg);
+        }
+      
+       
+  }
+}
