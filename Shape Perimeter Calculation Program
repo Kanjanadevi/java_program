@@ -1,0 +1,61 @@
+Veena wants to learn how to calculate the perimeter of different shapes — Square, Rectangle, Circle, and Triangle — to implement them in programming.
+Write a program that reads the required dimensions and calculates the perimeter of each shape using the given formulas:
+
+Square: 4 × a
+Rectangle: 2 × (l + w)
+Circle: 2 × π × r
+Triangle: side + base + side
+Input Format:
+
+First input: integer for side of the square
+Second and third input: integers for length and width of rectangle
+Fourth input: integer for radius of circle
+Fifth, sixth, and seventh input: integers for base1, side, and base2 of triangle
+Output Format:
+Print only the perimeter values, each on a new line, in this order:
+Square → Rectangle → Circle → Triangle
+
+Sample Input :
+9
+8
+7
+6
+5
+4
+3
+
+Sample Output :
+36
+30
+37.68
+12
+
+SOLUTIONS:
+
+import java.util.Scanner;
+
+public class ShapePerimeter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt(); 
+        int l = sc.nextInt();
+        int w = sc.nextInt(); 
+        int r = sc.nextInt();
+        int b1 = sc.nextInt();
+        int s = sc.nextInt(); 
+        int b2 = sc.nextInt();
+
+        int squarePerimeter = 4 * a;
+        int rectanglePerimeter = 2 * (l + w);
+        double circlePerimeter = 2 * 3.14 * r;
+        int trianglePerimeter = b1 + s + b2;
+
+        System.out.println(squarePerimeter);
+        System.out.println(rectanglePerimeter);
+        System.out.printf("%.2f\n", circlePerimeter);
+        System.out.println(trianglePerimeter);
+
+    }
+}
+
