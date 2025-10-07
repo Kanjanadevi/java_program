@@ -1,0 +1,35 @@
+priya is writing a Java program that needs to take two kinds of input from the user — first an integer, and then a sentence on the next line.
+However, after entering the integer, when she tries to type the sentence, the program immediately skips the input line and prints an empty output.
+Write a Java program that correctly reads both the integer and the sentence, and then prints them on separate lines.
+
+Input Format:
+
+First line: An integer
+Second line: A string (can contain spaces)
+Output Format:
+
+Print the integer on the first line
+Print the string on the second line
+Sample Input:
+7
+Learning Java is fun
+
+Sample Output:
+7
+Learning Java is fun
+
+SOLUTION:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();   
+        sc.nextLine();    
+        String sentence = sc.nextLine();  
+        System.out.println(num);
+        System.out.println(sentence);
+  }
+}
